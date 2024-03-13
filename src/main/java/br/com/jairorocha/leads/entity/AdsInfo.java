@@ -2,6 +2,7 @@ package br.com.jairorocha.leads.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -47,7 +48,7 @@ public class AdsInfo {
     private String fuel;
 
     @Size(max = 50)
-    @Column(name = "car_steering")
+    @JsonProperty("car_steering")
     private String carSteering;
 
     @Size(max = 50)
@@ -60,26 +61,26 @@ public class AdsInfo {
     private String financial;
 
     @Size(max = 50)
-    @Column(name = "financial_status")
+    @JsonProperty("financial_status")
     private String financialStatus;
 
     @Size(max = 50)
-    @Column(name = "vehicle_brand")
+    @JsonProperty("vehicle_brand")
     private String vehicleBrand;
 
     @Size(max = 50)
-    @Column(name = "vehicle_model")
+    @JsonProperty("vehicle_model")
     private String vehicleModel;
 
     @Size(max = 50)
-    @Column(name = "vehicle_version")
+    @JsonProperty("vehicle_version")
     private String vehicleVersion;
 
     @Size(max = 50)
     private String cubiccms;
 
     @Size(max = 255)
-    @Column(name = "moto_features")
+    @JsonProperty("moto_features")
     private String motoFeatures;
 
     @OneToOne
