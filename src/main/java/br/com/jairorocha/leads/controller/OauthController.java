@@ -15,7 +15,7 @@ import java.io.IOException;
 @RestController
 public class OauthController {
 
-    private static final String URL = "http://127.0.0.1:8080";
+    private static final String URL = "https://leads-jairorocha-api.azurewebsites.net";
     private static final String CLIENT_ID = "563247ed31d2044ee725dedcf5b0076ac14a3caf";
     private static final String CLIENT_SECRET = "e90f41c9ba21794c14305b5849daf03c";
     private static final String AUTH_HOST = "auth.olx.com.br";
