@@ -16,7 +16,6 @@ public class LeadController {
 
     @PostMapping("/{token}")
     public ResponseEntity<LeadResponse> createLead(@PathVariable String token, @RequestBody Lead lead) {
-        Lead resLead = leadService.createLead(lead);
-        return ResponseEntity.status(HttpStatus.CREATED).body(new LeadResponse(resLead.getId()));
+        return ResponseEntity.status(HttpStatus.CREATED).body(new LeadResponse(leadService.createLead(lead).getId()));
     }
 }

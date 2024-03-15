@@ -37,3 +37,5 @@ CREATE TABLE ads_info (
     cubiccms VARCHAR(50),
     moto_features VARCHAR(255)
 );
+
+ALTER TABLE public.ads_info ADD CONSTRAINT ads_info_id_ad_data_fkey FOREIGN KEY (id_ad_data) REFERENCES public."lead"(id) ON DELETE CASCADE ON UPDATE CASCADE;
